@@ -46,8 +46,8 @@ namespace DevIO.Api.V1.Controllers
         [HttpPut("{id}")]
         public async Task<TaskManagement> Put(Guid id, [FromBody] TaskManagement domain)
         {
-        
-            var resposta = _taskManagementRepository.Atualizar(domain);
+
+            await _taskManagementRepository.Atualizar(domain);
 
             return domain;
         }

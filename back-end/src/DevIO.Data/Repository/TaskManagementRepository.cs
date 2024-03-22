@@ -9,10 +9,5 @@ namespace DevIO.Data.Repository
     {
         public TaskManagementRepository(MeuDbContext context) : base(context) { }
 
-        //public async Task<Task> ObterEnderecoPorFornecedor(Guid fornecedorId)
-        //{
-        //    return await Db.Enderecos.AsNoTracking()
-        //        .FirstOrDefaultAsync(f => f.FornecedorId == fornecedorId);
-        //}
     }
 }

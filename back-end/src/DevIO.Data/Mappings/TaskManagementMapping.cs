@@ -1,5 +1,4 @@
-﻿using DevIO.Business.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DevIO.Data.Mappings
@@ -15,6 +14,21 @@ namespace DevIO.Data.Mappings
             builder.Property(c => c.UserId)
                 .IsRequired()
                 .HasColumnType("varchar(200)");
+
+            builder.Property(c => c.Date)
+                .HasColumnType("varchar(250)");
+
+            builder.Property(c => c.StartTime)
+               .HasColumnType("varchar(250)");
+
+            builder.Property(c => c.EndTime)
+               .HasColumnType("varchar(250)");
+
+            builder.Property(c => c.Subject)
+              .HasColumnType("varchar(250)");
+
+            builder.Property(c => c.Description)
+              .HasColumnType("varchar(250)");
         }
     }
 }
